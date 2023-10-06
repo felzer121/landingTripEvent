@@ -1,12 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Ubuntu } from "next/font/google";
 import ThemeRegistry from "./provider/ThemeRegistry";
+import { Inter } from "next/font/google";
 
-const ubuntuFont = Ubuntu({
+const interFont = Inter({
   subsets: ["latin", "cyrillic"],
   style: ["normal"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["400", "600", "800"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ubuntuFont.className}>
+      <body className={interFont.className}>
         <ThemeRegistry options={{ key: "mui" }}>{children}</ThemeRegistry>
       </body>
     </html>

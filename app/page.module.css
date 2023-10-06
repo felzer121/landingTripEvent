@@ -42,7 +42,7 @@
 
 .headerContainer__informAbout {
   display: flex;
-  height: 100%;
+  height: calc(100% - 48px);
   gap: 2em;
   flex-direction: column;
   justify-content: center;
@@ -50,6 +50,7 @@
 
 .headerContainer__informAboutTitle {
   font-size: 2.625em;
+  line-height: 120%;
   font-weight: 700;
 }
 
@@ -60,6 +61,50 @@
 .headerContainer__menu {
   max-width: 250px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 70px;
+}
+.headerContainer__menuButtons {
+  display: flex;
+  gap: 15px;
+}
+
+.headerContainer__menuContained {
+  list-style: none;
+}
+.headerContainer__menuContained li {
+  padding: 8px 0;
+  border-bottom: #c7c7c7 solid 1px;
+}
+
+.headerContainer__menuContained span {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.headerContainer__menuContained span {
+  transition: 0.5s;
+  cursor: pointer;
+}
+.headerContainer__menuContained span:hover::after {
+  width: 0px;
+}
+
+.headerContainer__menuContained span::after {
+  position: absolute;
+  transition: 0.5s;
+  content: "";
+  left: 0;
+  bottom: 2px;
+  width: calc(100% + 6px);
+  transform: rotate(-0.8deg);
+  height: 4px;
+  border-radius: 2px;
+  z-index: -1;
+  background-color: #9bc1f9;
 }
 
 .headerContainer_informDescription {
