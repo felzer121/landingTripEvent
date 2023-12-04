@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { CalendarHeader } from "./vector/CalendarHeader";
 import { CloudHeader } from "./vector/CloudHeader";
 import MenuIcon from "@mui/icons-material/Menu";
+import About from "./component/about/ui";
 
 export default function Home() {
   return (
@@ -67,6 +68,7 @@ export default function Home() {
           </div>
         </div>
       </header>
+      <About />
     </main>
   );
 }

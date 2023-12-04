@@ -4,7 +4,7 @@ import ThemeRegistry from "./provider/ThemeRegistry";
 import { Inter } from "next/font/google";
 
 const interFont = Inter({
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin"],
   style: ["normal"],
   weight: ["400", "600", "800"],
 });
